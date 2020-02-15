@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a New Event</title>
+
+    <script>
+        function display (){
+            var type = document.getElementById("eventType").value;
+            var title = document.getElementById("eventTitle").value;
+            var date1 = document.getElementById("date1").value;
+            var date2 = document.getElementById("date2").value;
+            var date3 = document.getElementById("date3").value;
+
+                if ((type !== "") && (title !== "") && (date1 !== "") && (date2 != "") && (date3 !== "") ) {
+                    alert("Successfully Saved!");
+                }
+                else{ 
+                    alert("Input Again!");
+        
+            }  
+          }
+
+    </script>
+
+    <style>
+    fieldset {
+        margin-left: 2px;
+        margin-right: 700px;
+    }
+
+    #buttons {
+        display: flex;
+        justify-content: center;
+     
+    }
+    
+    </style>
+</head>
+<body>
+        <fieldset>
+        <form width = 120px >
+            <label>Event Type: </label>
+            <select id = "eventType" required>
+                <option value = "">Choose one</option>
+                <option value = "one"> Event 1</option>
+                <option value = "two">Event 2</option>
+                <option value = "three">Event 3</option>
+              </select>
+            <br/><br/>
+
+            <label> Event Title: </label>
+            <input type = "text" id = "eventTitle"required>
+            <br/><br/>
+
+            <label>Event Dates: </label>
+            <input type = "date" id = "date1" required>  to  <input type = "date" id = "date2"required>
+            <br/<br/><br/>
+
+            <label> Posting Date: </label>
+            <input type = "date" id = "date3" required>
+            <br/><br/>
+
+
+            <input type = "checkbox" name = "" value =""> Is Registration Required?
+            <br/>
+
+            <input type = "checkbox" name = "" value =""> Is this event associated with any Family Programs?
+            <br/>    
+            
+            <input type = "checkbox" name = "" value =""> Upon Registration Complete, Are Users to Receive an Auto Generated Email?
+            <br/>
+            
+            <input type = "checkbox" name = "" value =""> Is there a point of contact?
+            <br/>
+            
+            <input type = "checkbox" name = "" value =""> Is there a hosting command point of contact?
+            <br/><br/>
+        
+
+            <div id = "buttons">
+            <input type = "submit" value = "Save" onclick = "display()" style = "margin-right: 10px;">   
+            <input type = "reset" value = "Cancel">
+            </div>
+        </form>
+    </fieldset>
+</body>
+</html>
